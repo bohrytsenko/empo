@@ -1,0 +1,40 @@
+// 6 services
+
+.tab-content-full .title-full {
+  position: absolute;
+  font-family: 'MuseoSansCyrl-Bold';
+  font-size: 20px;
+  color: #000;
+  top: 0;
+  left: 0;
+  padding: 0 20px;
+}
+.tab-content-full .service-description {
+  padding: 15px 5px 20px 30px;
+  min-height: 216px;
+}
+.full-list {
+  padding: 0;
+  margin: 0;
+}
+.tab-content-full .service-img img {
+  width: 300px;
+}
+.full-list li {
+  list-style: disc;
+  font-family: 'OpenSans-Regular';
+  color: #9b9b9b;
+  font-size: 14px;
+}
+.tab-content-full .service-box, .serv-full {
+  width: 300px;
+  min-height: 380px;
+}
+.tab-content-full .serv-full:hover .service-box {
+  min-height: 385px;
+}
+.tab-content-full .service-bottom {
+  text-align: center;
+}
+
+

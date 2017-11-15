@@ -1,0 +1,63 @@
+// Fade service
+
+@-webkit-keyframes fadeIn {
+  0% {
+    -webkit-transform: scale(0);
+    opacity: 0.0;
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes show {
+  0% {
+    opacity: 0.0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+// borders
+
+@keyframes bracket-line-top {
+  0% {
+    background-color: #ffffff;
+    width: 0;
+    height: 3px;
+  }
+  100% {
+    background-color: #ffffff;
+    width: 450px;
+    height: 3px;
+  }
+}
+@keyframes bracket-line-bottom {
+  0% {
+    background-color: #ffffff;
+    width: 0;
+    height: 3px;
+  }
+  100% {
+    background-color: #ffffff;
+    width: 550px;
+    height: 3px;
+  }
+}
+@keyframes bracket-line {
+  0% {
+    background-color: #ffffff;
+    width: 3px;
+    height: 0;
+  }
+  100% {
+    background-color: #ffffff;
+    width: 3px;
+    height: 100%;
+  }
+}
+

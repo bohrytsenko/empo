@@ -1,0 +1,27 @@
+{
+  "name": "empo",
+  "description": "",
+  "main": "",
+  "authors": [
+    "hrytsenko <hrytsenkobohdan@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize.css": "*",
+    "slick-carousel": "",
+    "jquery": "2.*",
+    "bootstrap": "",
+    "components-font-awesome": "",
+    "zooming": "^1.2.4",
+    "Headhesive.js": "headhesive#^1.2.4",
+    "fancybox": "^3.1.20"
+  }
+}
