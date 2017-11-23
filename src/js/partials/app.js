@@ -1,4 +1,4 @@
-jQuery(document).ready(function() {
+$(document).ready(function() {
     // Fancybox
 
     $('[data-fancybox="gallery"]').fancybox({
@@ -35,20 +35,14 @@ jQuery(document).ready(function() {
 
     //Tabs background
 
-    jQuery("a[href='#complex']").on("click", function() {
-        jQuery(".front-page").addClass('bg-small');
+    $("a[href='#complex']").on("click", function() {
+        $(".front-page").addClass('bg-small');
     });
-    jQuery("a[href='#steps']").on("click", function() {
-        jQuery(".front-page").removeClass('bg-small');
+    $("a[href='#steps']").on("click", function() {
+        $(".front-page").removeClass('bg-small');
     });
 
-    //Headhesive
 
-    var options = {
-        offset: 500,
-        throttle: 250
-    };
-    var header = new Headhesive('.header-scroll', options);
 
     // Portfolio photo
 
@@ -269,23 +263,23 @@ $( document ).ready(function () {
 
 });
 
-// Sites carousel$(document).ready(function() {
-$(document).ready(function() {
-    jQuery('.nav-tabs').on('click', function(){
+    // Sites carousel$(document).ready(function() {
+    $(document).ready(function() {
+        $('.nav-tabs').on('click', function(){
 
-        jQuery('.responsive-site').find('#slick-slide30').trigger('click');
-        jQuery('.responsive-logo').find('#slick-slide10').trigger('click');
-        jQuery('.portfolio-slider').find('#slick-slide00').trigger('click');
+            $('.responsive-site').find('#slick-slide30').trigger('click');
+            $('.responsive-logo').find('#slick-slide10').trigger('click');
+            $('.portfolio-slider').find('#slick-slide00').trigger('click');
+        });
+
     });
 
-});
+    // Portfolio tabs
 
-// Portfolio tabs
-
-$(".nav-tabs").find("li a:nth-child(2)").click();
-var url = document.URL;
-var hash = url.substring(url.indexOf('#'));
-$(".nav-tabs").find("li a").each(function(key, val) {
+    $(".nav-tabs").find("li a:nth-child(2)").click();
+    var url = document.URL;
+    var hash = url.substring(url.indexOf('#'));
+    $(".nav-tabs").find("li a").each(function(key, val) {
     if (hash == $(val).attr('href')) {
         $(val).click();
     }
@@ -293,7 +287,7 @@ $(".nav-tabs").find("li a").each(function(key, val) {
         location.hash = $(this).attr('href');
     });
 
-// Facebook analytic
+    // Facebook analytic
     // Submit
     $( '.sbmt-btn' ).click(function() {
         fbq('track', 'Lead', {
@@ -305,6 +299,7 @@ $(".nav-tabs").find("li a").each(function(key, val) {
     });
 
     // Subscribe
+
     $( '.sbscrb-btn' ).click(function() {
         fbq('track', 'Lead', {
             content_name: 'footer_subscription',
@@ -314,9 +309,25 @@ $(".nav-tabs").find("li a").each(function(key, val) {
         });
     });
 
+    // Header sticky
 
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+        if (scroll >= 50) {
+            $('.header-scroll').addClass('header__sticky', 1000);
+        } else {
+            $('.header-scroll').removeClass('header__sticky', 1000);
+        }
+    });
 
-    
-    
 });
+// Binotel
+
+$(document).ready(function () {
+    var explode = function() {document.getElementById('bingc-phone-button').click();}
+    setTimeout(explode, 1000);
+})
+
+
+
 

@@ -1,0 +1,623 @@
+// Blog
+
+.blog-categories ul 
+  width: 830px 
+  max-width: 100% 
+  margin: 0 auto 
+  padding: 0 
+  display: flex 
+  flex-direction: row 
+  justify-content: center 
+ 
+.blog-categories ul li  
+  list-style: none 
+  border: 1px solid #fff 
+ 
+
+.blog-categories ul li:first-child  
+  border-top-left-radius: 7px 
+  border-bottom-left-radius: 7px 
+ 
+
+.blog-categories ul li:last-child  
+  border-top-right-radius: 7px 
+  border-bottom-right-radius: 7px 
+ 
+.blog-categories ul .current-cat  
+  background-image: linear-gradient(349deg, #f5f7ff, #fff) 
+ 
+.blog-categories ul .current-cat a  
+  color: #3852d5 
+ 
+.blog-categories ul li a 
+  font-size: 14px 
+  color: #fff 
+  font-family: 'OpenSans-Regular' 
+  background: 0 0 
+  padding: 0 26px 
+  line-height: 40px 
+ 
+
+.blog  
+  background-color: #ffffff 
+  padding: 40px 0 
+ 
+
+.blog-wrap  
+  display: flex 
+  flex-direction: row 
+  flex-wrap: wrap 
+  justify-content: space-between 
+ 
+
+.blog-item-content,
+.blog-item:first-child 
+  width: 750px 
+  max-width: 100% 
+  border-right: 3px solid #3852d5 
+  padding-right: 50px 
+ 
+
+.post-wrap  
+  margin-bottom: 30px 
+ 
+
+.post-wrap:nth-child(n+2),
+.alm-reveal:nth-child(n+2) .post-wrap,
+.post:nth-child(n+2) .post-wrap  
+  width: 48% 
+ 
+
+.post-wrap__img  
+  position: relative 
+  width: 700px 
+  max-width: 100% 
+  transition: 0.3s 
+  margin-bottom: 5px 
+ 
+
+.post-wrap__img:hover:before  
+  width: 100% 
+  opacity: 1 
+  left: 0 
+  transition: 0.3s 
+ 
+
+.post-wrap__img:hover .post-wrap__title  
+  background: none 
+  transition: 0.3s 
+ 
+
+.post-wrap__img:hover .post-wrap__title .title,
+.post-wrap__img:hover .post-wrap__title .undertitle 
+  color: #ffffff 
+  transition: 0.3s 
+ 
+
+.post-wrap__img:before  
+  content: '' 
+  background-image: linear-gradient(to bottom,rgba(105, 138, 237, 0.7),#3852d5) 
+  width: 100% 
+  opacity: 0 
+  height: 100% 
+  position: absolute 
+  top: 0 
+  left: 0 
+  transition: 0.3s 
+ 
+
+.post-wrap__img img  
+  height: auto 
+ 
+
+.post-wrap__cat .post-categories  
+  position: absolute 
+  right: 0 
+  top: 0 
+  min-height: 40px 
+  line-height: 40px 
+  background-color: #f6a623 
+  padding: 0 20px 
+ 
+
+.post-wrap:nth-child(n+2) .post-wrap__cat .post-categories ,
+.alm-reveal:nth-child(n+2) .post-wrap__cat .post-categories,
+.post:nth-child(n+2) .post-wrap__cat .post-categories  
+  line-height: 31px 
+  min-height: 31px 
+ 
+
+.post-wrap:nth-child(n+2) .post-wrap__cat .post-categories ,
+.alm-reveal:nth-child(n+2) .post-wrap__cat .post-categories,
+.post:nth-child(n+2) .post-wrap__cat .post-categories  
+  font-size: 12px 
+ 
+
+.post-wrap__cat .post-categories li  
+  list-style: none 
+  padding: 0 
+  margin: 0 
+ 
+
+.post-wrap__cat .post-categories li a  
+  font-family: 'MuseoSansCyrl-Bold' 
+  font-size: 18px 
+  color: #ffffff 
+ 
+
+.post-wrap__title  
+  width: 100% 
+  padding: 18px 30px 
+  position: absolute 
+  bottom: 0 
+  background-color: rgba(255, 255, 255, 0.85) 
+  transition: 0.3s 
+ 
+
+.post-wrap__title a  
+  text-decoration: none!important 
+ 
+
+.post-wrap__title .title  
+  font-family: 'MuseoSansCyrl-Bold' 
+  font-size: 30px 
+  color: #000000 
+  margin: 0 0 15px 0 
+ 
+
+.post-wrap:nth-child(n+2) .post-wrap__title,
+.alm-reveal:nth-child(n+2) .post-wrap__title,
+.post:nth-child(n+2) .post-wrap__title  
+  padding: 9px 14px 
+ 
+
+.post-wrap:nth-child(n+2) .post-wrap__title .title,
+.alm-reveal:nth-child(n+2) .post-wrap__title .title,
+.post:nth-child(n+2) .post-wrap__title .title  
+  font-size: 18px 
+  margin-bottom: 0 
+ 
+
+.post-wrap:nth-child(n+2) .post-wrap__title .undertitle,
+.alm-reveal:nth-child(n+2) .post-wrap__title .undertitle,
+.post:nth-child(n+2) .post-wrap__title .undertitle  
+  display: none 
+ 
+
+.post-wrap__title .undertitle  
+  font-family: 'OpenSans-Regular' 
+  font-size: 16px 
+  color: #000000 
+  margin: 0 
+ 
+.post-wrap:nth-child(n+2) .post-info,
+.alm-reveal:nth-child(n+2) .post-info,
+.post:nth-child(n+2) .post-info  
+  justify-content: flex-start 
+ 
+
+.post-info  
+  font-family: 'OpenSans-Regular' 
+  font-size: 12px 
+  color: rgba(185, 185, 185, 0.71) 
+  display: flex 
+  flex-wrap: wrap 
+  flex-direction: row 
+  justify-content: center 
+  align-items: center 
+ 
+
+.info-wrap  
+  margin: 0 10px 
+  display: flex 
+  align-items: center 
+ 
+
+.info-wrap i  
+  display: flex 
+  align-items: center 
+  margin-right: 5px 
+ 
+
+.pageviews-placeholder  
+  margin-right: 5px 
+ 
+
+.alm-reveal,
+.post  
+  display: flex 
+  flex-direction: row 
+  flex-wrap: wrap 
+  justify-content: space-between 
+ 
+
+.alm-load-more-btn,
+.malinky-load-more a 
+  background-image: linear-gradient(340deg, #3d4dd4, #4b6cd6)!important 
+  font-size: 14px!important 
+  font-family: 'OpenSans-Regular' 
+  font-weight: 100!important 
+  color: #ffffff!important 
+  border-radius: 7px!important 
+  padding: 10px 20px 
+ 
+
+.posts-selector-load-more-button  
+  margin-bottom: 30px 
+ 
+
+// Search
+
+.search-wrap  
+  margin-bottom: 25px 
+ 
+
+.sidebar-item  
+  width: 336px 
+ 
+
+.search-wrap .title  
+  font-family: 'MuseoSansCyrl-Bold' 
+  font-size: 20px 
+  text-align: center 
+  color: #000000 
+  margin: 0 0 13px 0 
+ 
+
+.search__form  
+  display: flex 
+  flex-direction: row 
+  justify-content: flex-start 
+ 
+
+.search__form label  
+  width: 70% 
+ 
+
+.search__field  
+  width: 100% 
+  max-width: 100% 
+  height: 27px 
+  background-color: #ffffff 
+  border: solid 1px #f1f1f1 
+  padding-left: 5px 
+ 
+
+.search__field:focus  
+  outline: 0 
+  border-color: #3d4dd4 
+ 
+
+.search__submit  
+  width: 30% 
+  max-width: 100% 
+  height: 27px 
+  line-height: 26px 
+  background-image: linear-gradient(341deg, #3d4dd4, #4b6cd6) 
+  font-family: 'OpenSans-Regular' 
+  font-size: 14px 
+  color: #ffffff 
+  border: 0 
+ 
+
+// Subscribe
+
+.sidebar-subscribe  
+  width: 100% 
+  max-width: 100% 
+  min-height: 217px 
+  border-radius: 7px 
+  background-image: linear-gradient(154deg, #fbda61, #f76b1c) 
+  padding: 20px 
+  position: relative 
+  z-index: 1 
+  margin-bottom: 25px 
+  display: flex 
+  flex-direction: column 
+  align-items: center 
+  justify-content: center 
+ 
+
+.sidebar-subscribe:before  
+  position: absolute 
+  content: '' 
+  right: 0 
+  top: 0 
+  background-image: url("../img/icon_blog_subscribe.svg") 
+  background-size: contain 
+  background-repeat: no-repeat 
+  width: 60% 
+  height: 100% 
+  z-index: -1 
+ 
+
+.sidebar-subscribe .title  
+  font-family: 'MuseoSansCyrl-Bold' 
+  font-size: 20px 
+  text-align: center 
+  color: #000000 
+  margin: 0 0 40px 0 
+ 
+
+.sidebar-subscribe p  
+  font-family: 'OpenSans-Regular' 
+  font-size: 14px 
+  color: #ffffff 
+ 
+
+.sidebar-subscribe .your-email input  
+  width: 100% 
+  height: 27px 
+  background-color: #ffffff 
+  border: solid 1px #f1f1f1 
+  padding-left: 10px 
+  color: #9b9b9b 
+ 
+
+.sidebar-subscribe .your-email input:focus  
+  outline: 0 
+  border-color: #3d4dd4 
+ 
+
+.sidebar-subscribe input[type="submit"]  
+  display: block 
+  width: 113px 
+  max-width: 100% 
+  margin: 20px auto 0 auto 
+  height: 40px 
+  line-height: 38px 
+  border-radius: 7px 
+  background-image: linear-gradient(343deg, #61e365, #86e989) 
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12) 
+  border: 0 
+  font-family: 'OpenSans-Regular' 
+  font-size: 14px 
+  color: #ffffff 
+  outline: 0 
+ 
+
+// Popular
+
+.sidebar-popular .title  
+  font-family: 'MuseoSansCyrl-Bold' 
+  font-size: 20px 
+  text-align: center 
+  color: #000000 
+  margin: 0 0 13px 0 
+ 
+
+.sidebar-popular ul  
+  padding: 0 
+ 
+
+.popular-posts  
+  list-style: none 
+  background-image: linear-gradient(to bottom, #698aed, #3852d5) 
+  padding: 12px 14px 
+  margin-bottom: 25px 
+ 
+
+.popular-posts__title .title  
+  font-family: 'MuseoSansCyrl-Medium' 
+  font-size: 18px 
+  font-weight: 900 
+  color: #ffffff 
+  text-align: left 
+  margin: 0 0 7px 0 
+ 
+
+.popular-posts__info  
+  font-family: 'OpenSans-Regular' 
+  font-size: 12px 
+  color: #ffffff 
+  display: flex 
+  flex-direction: row 
+  justify-content: space-between 
+ 
+
+.popular-info__cat li 
+  list-style: none 
+ 
+.popular-info__cat li a  
+  font-family: 'OpenSans-Regular' 
+  font-size: 12px 
+  color: #ffffff 
+ 
+
+.popular-posts a  
+  font-family: 'OpenSans-Regular' 
+  font-size: 12px 
+  color: #ffffff 
+ 
+
+.popular-posts a:hover  
+  color: #ffffff 
+  text-decoration: underline 
+ 
+
+.popular-info__views,
+.popular-info__time  
+  display: flex 
+  align-items: center 
+ 
+
+.popular-info i  
+  display: flex 
+  align-items: center 
+  margin-right: 5px 
+ 
+
+// Banner
+
+.sidebar-item__banner  
+  width: 100% 
+  height: auto 
+  background-color: #f0f0f0 
+  margin-bottom: 25px 
+ 
+
+.sidebar-item__fb  
+  width: 100% 
+  height: auto 
+  background-color: #f0f0f0 
+  margin-bottom: 25px 
+ 
+
+// Single
+
+.single__content img  
+  height: auto 
+ 
+
+.single__title  
+  margin: 0 0 14px 30px 
+  width: 100% 
+ 
+
+.single__title .title  
+  font-family: 'MuseoSansCyrl-Bold' 
+  font-size: 30px 
+  color: #000000 
+  margin: 0 0 10px 0 
+
+
+.single__title .undertitle  
+  font-family: 'OpenSans-Regular' 
+  font-size: 16px 
+  color: #000000 
+  margin: 0 
+ 
+
+.single__date  
+  font-family: 'OpenSans-Regular' 
+  font-size: 12px 
+  color: rgba(185, 185, 185, 0.7) 
+  margin: 0 0 17px 30px 
+ 
+
+.single__img  
+  margin-bottom: 23px 
+ 
+
+.single__img img  
+  height: auto 
+ 
+
+.single__content  
+  margin: 0 30px 20px 30px 
+  font-family: 'OpenSans-Regular' 
+  font-size: 14px 
+  width: 700px 
+  max-width: 100% 
+  color: #424242 
+ 
+
+.wp-caption  
+  max-width: 100% 
+ 
+
+.single__banner  
+  width: 100% 
+  height: auto 
+  background-color: #f0f0f0 
+  margin-bottom: 20px 
+ 
+
+.single__featured .title  
+  font-family: 'MuseoSansCyrl-Bold' 
+  font-size: 20px 
+  color: #000000 
+  margin: 0 0 20px 30px 
+  width: 100% 
+ 
+
+.featured  
+  display: flex 
+  flex-wrap: wrap 
+  flex-direction: row 
+  justify-content: space-between 
+ 
+
+.featured .post-wrap__title .title  
+  margin: 0 
+ 
+
+.result-title  
+  font-family: 'MuseoSansCyrl-Bold' 
+  font-size: 30px 
+  color: #000000 
+  margin: 0 0 20px 0
+
+// Share
+
+body ul.heateor_sss_sharing_ul li  
+  margin-bottom: 5px!important 
+ 
+
+body .heateor_sss_vertical_sharing .heateorSssSharing  
+  border-radius: 50% 
+  background-color: #3d4dd4 
+  width: 30px!important 
+  height: 30px!important 
+ 
+
+.search-in-place  
+  font-family: 'OpenSans-Light' 
+  font-size: 14px 
+  color: #424242 
+ 
+
+.heateor_sss_sharing_container  
+  margin: 10px 0
+
+// Catrgory case
+
+.category-case
+  h3
+    font-family: 'OpenSans-ExtraBold'
+    padding-left: 20px
+    font-size: 25px
+    color: #3852d5
+    margin: 40px 0 20px 0
+  p,
+  li
+    font-size: 18px
+    line-height: 1.2
+    font-family: 'OpenSans-Regular'
+  blockquote
+    background-image: linear-gradient(335deg, #f1f1f1, #dfdfdf)
+    padding: 26px 37px 23px 29px
+    border: 0
+    margin: 0 20px
+    p
+      font-family: 'OpenSans-Bold'
+  em
+    font-size: 12px
+  img
+    margin: 20px 0 0 0
+
+.cases_title
+  font-family: 'OpenSans-ExtraBold'
+  padding-left: 20px
+  font-size: 25px
+  color: #3852d5
+  margin: 40px 0 20px 20px!important
+
+.cases_result
+  border: 7px solid #3852d5
+  margin: 0 20px 50px 40px
+  padding: 60px 20px 20px 20px
+  img
+    height: auto
+  p
+    padding-bottom: 40px
+    b,
+    strong
+      color: #3852d5
+      font-family: 'OpenSans-Bold'
+  &__img
+    text-align: right
+    img
+      width: 100px
+
+

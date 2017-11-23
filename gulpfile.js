@@ -7,12 +7,19 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
     rigger = require('gulp-rigger'),
-    cssmin = require('gulp-minify-css'),
+    cssmin = require('gulp-clean-css'),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
     rimraf = require('rimraf'),
     browserSync = require("browser-sync"),
-    reload = browserSync.reload;
+    reload = browserSync.reload,
+    wiredep = require('wiredep').stream,
+    clean = require('gulp-clean');
+
+gulp.task('clean', function () {
+    return gulp.src('build', {read: false})
+        .pipe(clean());
+});
 
 var path = {
     build: { //Тут мы укажем куда складывать готовые после сборки файлы
@@ -25,14 +32,14 @@ var path = {
     src: { //Пути откуда брать исходники
         html: 'src/*.html', //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
         js: 'src/js/main.js',//В стилях и скриптах нам понадобятся только main файлы
-        style: 'src/style/main.scss',
+        style: 'src/style/main.sass',
         img: 'src/img/**/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
         fonts: 'src/fonts/**/*.*'
     },
     watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
         html: 'src/**/*.html',
         js: 'src/js/**/*.js',
-        style: 'src/style/**/*.scss',
+        style: 'src/style/**/*.sass',
         img: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*'
     },
@@ -48,6 +55,14 @@ var config = {
     port: 9000,
     logPrefix: "Frontend_Devil"
 };
+
+gulp.task('bower', function () {
+    gulp.src('./build/index.html')
+        .pipe(wiredep({
+            directory: "build/bower_comp"
+        }))
+        .pipe(gulp.dest('./build'));
+});
 
 gulp.task('html:build', function () {
     gulp.src(path.src.html) //Выберем файлы по нужному пути
@@ -67,7 +82,7 @@ gulp.task('js:build', function () {
 });
 
 gulp.task('style:build', function () {
-    gulp.src(path.src.style) //Выберем наш main.scss
+    gulp.src(path.src.style) //Выберем наш main.sass
         .pipe(sourcemaps.init()) //То же самое что и с js
         .pipe(sass()) //Скомпилируем
         .pipe(prefixer()) //Добавим вендорные префиксы
@@ -128,4 +143,5 @@ gulp.task('clean', function (cb) {
     rimraf(path.clean, cb);
 });
 
-gulp.task('default', ['build', 'webserver', 'watch']);
+gulp.task('default', ['bower', 'build', 'webserver', 'watch']);
+
