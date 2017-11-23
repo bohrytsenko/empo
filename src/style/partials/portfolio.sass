@@ -1,0 +1,316 @@
+// Portfolio page
+
+.portfolio-title .title 
+  background: #eee 
+  margin: 0 
+  padding: 20px 0 0 0 
+ 
+
+.portfolio-tabs  
+  text-align: center 
+  width: 565px 
+  max-width: 100% 
+  margin: 25px auto 0 auto 
+ 
+.portfolio-tabs .nav-tabs  
+  padding-left: 0 
+  border: 0 
+  display: flex 
+  flex-direction: row 
+  justify-content: center 
+ 
+.portfolio-tabs .nav-tabs li  
+  list-style: none 
+  float: left 
+  border: solid 1px #ffffff 
+ 
+.portfolio-tabs .nav-tabs li:first-child  
+  border-top-left-radius: 7px 
+  border-bottom-left-radius: 7px 
+ 
+.portfolio-tabs .nav-tabs li:last-child  
+  border-top-right-radius: 7px 
+  border-bottom-right-radius: 7px 
+ 
+.portfolio-tabs .nav-tabs li a  
+  font-family: 'OpenSans-Regular' 
+  font-size: 14px 
+  color: #ffffff 
+  border: 0!important 
+  background: 0 
+  padding: 7px 26px 
+ 
+.portfolio-tabs .nav-tabs li a:hover  
+  background-color: inherit 
+ 
+.portfolio-tabs .nav-tabs .active  
+  background-image: linear-gradient(349deg, #f5f7ff, #ffffff) 
+ 
+.portfolio-tabs .nav-tabs .active a 
+  color: #3852d5 
+ 
+.portfolio-tabs .nav-tabs .active a:hover 
+  border: 0 
+  color: #3852d5 
+ 
+.portfolio-tabs .nav-tabs .active a:focus 
+  border: 0 
+  color: #3852d5 
+  outline: 0 
+ 
+
+.portfolio-block .portfolio-items  
+  margin-top: 0 
+ 
+
+// Tabs
+
+.tabs  
+  display: -webkit-box 
+  display: -ms-flexbox 
+  display: flex 
+  -ms-flex-wrap: wrap 
+  flex-wrap: wrap 
+ 
+
+.tabs label  
+  -webkit-box-ordinal-group: 2 
+  -ms-flex-order: 1 
+  order: 1 
+  display: block 
+  padding: 1rem 2rem 
+  margin-right: 0.2rem 
+  cursor: pointer 
+  background: #90CAF9 
+  font-weight: bold 
+  -webkit-transition: background ease 0.2s 
+  transition: background ease 0.2s 
+ 
+
+.tabs .tab  
+  -webkit-box-ordinal-group: 100 
+  -ms-flex-order: 99 
+  order: 99 
+  -webkit-box-flex: 1 
+  -ms-flex-positive: 1 
+  flex-grow: 1 
+  width: 100% 
+  display: none 
+  padding: 1rem 
+  background: #fff 
+ 
+
+.tabs input[type="radio"]  
+  display: none 
+ 
+
+.tabs input[type="radio"]:checked + label  
+  background: #fff 
+ 
+
+.tabs input[type="radio"]:checked + label + .tab  
+  display: block 
+ 
+
+@media (max-width: 45em)  
+  .tabs .tab,
+  .tabs label  
+    -webkit-box-ordinal-group: NaN 
+    -ms-flex-order: initial 
+    order: initial 
+   
+
+  .tabs label  
+    width: 100% 
+    margin-right: 0 
+    margin-top: 0.2rem 
+   
+ 
+
+.portfolio-pane > .tab-pane  
+  display: block 
+  height: 0 
+  overflow: hidden 
+  padding: 0 
+  transition: all 0.1s 
+ 
+.portfolio-pane > .tab-pane .slick-slide 
+  height: 0 
+ 
+.portfolio-pane > .tab-pane .slick-dots  
+  display: none 
+ 
+.portfolio-pane > .tab-pane #carousel  
+  height: 0 
+ 
+.portfolio-pane .portfolio-photo  
+  margin-top: 0 
+ 
+.portfolio-pane .portfolio-block  
+  padding: 0 
+ 
+
+.portfolio-pane > .active 
+  height: auto 
+  padding: 45px 0 50px 
+ 
+.portfolio-pane > .active .slick-slide 
+  height: auto 
+ 
+.portfolio-pane > .active .slick-dots  
+  display: block 
+ 
+.portfolio-pane > .active #carousel  
+  height: 600px 
+ 
+
+// Logo
+
+.responsive-logo .slick-track  
+  min-width: 100% 
+ 
+.logo-page  
+  padding: 18px 0 50px 0 
+ 
+.logo-block  
+  outline: none 
+  cursor: pointer 
+  display: flex!important 
+  flex-wrap: wrap 
+  flex-direction: row 
+  justify-content: space-between 
+ 
+.logo-block img  
+  width: 300px 
+  display: inline-block 
+  margin: 0 38px 20px 
+  cursor: pointer 
+ 
+.logo-page .slick-dots  
+  padding: 0 
+  text-align: center 
+  margin-top: 30px 
+ 
+.logo-page .slick-dots button 
+  display: none 
+ 
+.logo-page .slick-dots li  
+  display: inline-block 
+  list-style: none 
+  width: 11.3px 
+  height: 11px 
+  background-color: #ffffff 
+  border-radius: 50% 
+  cursor: pointer 
+  margin: 0 5px 
+ 
+.logo-page .slick-dots .slick-active  
+  background-color: #3852d5 
+ 
+
+// Bag
+
+.responsive-bag .slick-track  
+  min-width: 100% 
+ 
+.bag-page  
+  padding: 18px 0 50px 0 
+ 
+.bag-block  
+  outline: none 
+  cursor: pointer 
+  display: flex!important 
+  flex-wrap: wrap 
+  flex-direction: row 
+  justify-content: space-between 
+  width: 100%!important 
+ 
+.bag-block img  
+  width: 300px 
+  display: inline-block 
+  margin: 0 38px 20px 
+  cursor: pointer 
+ 
+.bag-page .slick-dots  
+  padding: 0 
+  text-align: center 
+  margin-top: 30px 
+ 
+.bag-page .slick-dots button 
+  display: none 
+ 
+.bag-page .slick-dots li  
+  display: inline-block 
+  list-style: none 
+  width: 11.3px 
+  height: 11px 
+  background-color: #ffffff 
+  border-radius: 50% 
+  cursor: pointer 
+  margin: 0 5px 
+ 
+.bag-page .slick-dots .slick-active  
+  background-color: #3852d5 
+ 
+
+// Sites
+.site-page  
+  position: relative 
+  padding: 10px 0 50px 0 
+ 
+
+#carousel  
+  width: 800px 
+  margin: 0 auto 
+  height: 900px 
+  display: relative 
+ 
+#carousel img  
+  display: hidden  /* hide images until carousel prepares them */
+  cursor: pointer  /* not needed if you wrap carousel items in links */
+  width: 325px 
+  height: auto!important 
+ 
+
+// site
+
+.responsive-site .slick-track  
+  min-width: 100% 
+ 
+.responsive-site  
+  text-align: center 
+ 
+.site__slide  
+  outline: 0 
+ 
+.site__mobile  
+  outline: none 
+  cursor: pointer 
+ 
+.site__mobile img  
+  width: 300px 
+  display: inline-block 
+  margin: 0 38px 20px 
+ 
+.site__mobile .slick-dots  
+  padding: 0 
+  text-align: center 
+  margin-top: 30px 
+ 
+.site__mobile .slick-dots button 
+  display: none 
+ 
+.site__mobile .slick-dots li  
+  display: inline-block 
+  list-style: none 
+  width: 11.3px 
+  height: 11px 
+  background-color: #ffffff 
+  border-radius: 50% 
+  cursor: pointer 
+  margin: 0 5px 
+ 
+.site__mobile .slick-dots .slick-active  
+  background-color: #3852d5 
+ 
+
